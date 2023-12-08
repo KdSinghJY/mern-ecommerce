@@ -12,7 +12,7 @@ const role = require('../../middleware/role');
 const checkAuth = require('../../utils/auth');
 const path = require('path');
 const fs = require('fs');
-const baseUrl = 'https://node.jydigitek.com/';
+const baseUrl = 'https://node.jydigitek.com/public/uploads/';
 
 const {
   getStoreProductsQuery,
