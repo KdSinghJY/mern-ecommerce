@@ -8,6 +8,7 @@ const keys = require('./config/keys');
 const routes = require('./routes');
 const socket = require('./socket');
 const setupDB = require('./utils/db');
+const path = require('path');
 
 const { port } = keys;
 const app = express();
@@ -24,6 +25,11 @@ app.use(cors());
 
 setupDB();
 require('./config/passport')(app);
+app.use(
+  '/public/uploads',
+  express.static(path.join(__dirname, 'public/uploads'))
+);
+
 app.use(routes);
 
 const server = app.listen(port, () => {
