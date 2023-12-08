@@ -1,5 +1,5 @@
 //export const API_URL = process.env.API_URL;
-export const API_URL = 'http://localhost:9090/api';
+export const API_URL = 'https://node.jydigitek.com/api';
 
 export const SOCKET_URL =
   window.location.host.indexOf('localhost') >= 0
